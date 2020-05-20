@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Анализатор слов</title>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body id="top">
+    <header id="home">
+      <nav>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+              <nav class="pull">
+                <ul class="top-nav">
+                  <li><a href="#">Главная <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                  <li><a href="#">Вход <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                  <li><a href="#">Новости <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                  <li><a href="#">Статьи <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                  <li><a href="#">Правила использования <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                  <li><a href="#">О нас <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="topbar" id="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-right navicon">
+              <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center inner">
+              <h1 class="animated fadeInDown" id="title-of-site">АНАЛИЗАТОР СЛОВ</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="route text-center section-padding" id="route">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 wp1" id="form-container">
+            <div id="rules">
+              <h1 class="arrow">Начало работы</h1>
+              <p id="rules-text">Чтобы выбрать слово, подлежащее анализу, Вам необходимо получить исходный текст на английском языке.
+              Вы можете выбрать свой файл с текстом, нажав на кнопку выбора файла. Либо введите текст вручную в специальное поле чуть ниже.
+              После нажатия кнопки "Анализировать" модифицированный текст (без знаков препинания и иных небуквенных символов) появится под формой. Все слова в нем являются кликабельными. Для выбора слова нужно
+              просто нажать на него, и Вы увидите результат анализа этого слова. Ну или не увидите, смотря как повезет со словом:) Приятной работы!</p>
+            </div>
+            <form id="search-form">
+              <fieldset class="form-group">
+                <label>Выбор файла для анализа</label>
+                <input type="file" class="form-control" id="filename-field">
+                <label>Поле для ввода текста</label>
+                <textarea id="usertext-field" cols="43" rows="15"></textarea>
+              </fieldset>
+              <button type="button" class="btn btn-primary" id="analyze-button">Анализировать</button>
+            </form>
+            <div id="words-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features text-center section-padding" id="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="arrow">Анализ выбранного слова</h1>
+            <div id="analyzed-word-container">
+              <p id="analyzed-word"></p>
+              <p id="analyzed-word-transcription"></p>
+            </div>
+            <h1 class="arrow">Список значений слова</h1>
+            <div class="word-info" id="definitions-container"></div>
+            <div class="word-info" id="examples-container"></div>
+            <div class="word-info" id="antonyms-container"></div>
+            <div class="row word-info">
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fa fa-comment"></i><span>Category Of</span></h2>
+                  <div id="categories-container"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fa fa-comment"></i><span>Similar To</span></h2>
+                  <div id="similars-container"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fa fa-comment"></i><span>Substance Of</span></h2>
+                  <div id="substances-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-bg text-center section-padding contact-wrap" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="arrow">Наши контакты</h1>
+          </div>
+        </div>
+        <div class="row contact-details">
+          <div class="col-md-4">
+            <div class="light-box box-hover">
+              <h2><i class="fa fa-map-marker"></i><span>Адрес</span></h2>
+              <p>222015, Минск, ул. Козлова, 15</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="light-box box-hover">
+              <h2><i class="fa fa-mobile"></i><span>Телефон</span></h2>
+              <p>+375 17 293 12 34</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="light-box box-hover">
+              <h2><i class="fa fa-paper-plane"></i><span>Электронная почта</span></h2>
+              <p><a href="#">allwords@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="social-buttons">
+              <li><a href="#" class="social-btn"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" class="social-btn"><i class="fa fa-vk"></i></a></li>
+              <li><a href="#" class="social-btn"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="legals">
+              <li><a href="#">Условия эксплуатации</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 credit">
+            <p>2020 &copy; ООО "БелВордс"</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="dist/main.js"></script>
+  </body>
+</html>
